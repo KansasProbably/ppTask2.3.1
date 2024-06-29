@@ -14,20 +14,19 @@ public class User {
     private Long userId;
 
     @Column(name = "name")
-    @Pattern(regexp = "[A-Za-z]{2,15}", message = "Uncorrect name")
+
     private String name;
 
     @Column(name = "surname")
-    @Pattern(regexp = "[A-Za-z]{2,15}", message = "Uncorrect surname")
+
     private String surname;
 
     @Column(name = "age")
-    @Min(value = 0, message = "Age >= 0")
-    @Max(value = 127, message = "Age < 128")
+
     private byte age;
 
     @Column(name = "email")
-    @Pattern(regexp = "[A-Za-z]{2,15}"+"@"+"[A-Za-z]{2,15}", message = "Uncorrect email")
+
     private String email;
 
     public User() {

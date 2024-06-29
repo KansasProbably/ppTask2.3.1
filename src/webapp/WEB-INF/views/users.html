@@ -52,12 +52,12 @@
         <td th:utext="${users.age}">Age</td>
         <td th:utext="${users.email}">Email</td>
         <td>
-            <form th:action="@{'edit/' + ${users.userId}}">
-                <input type="submit" class="buttonEdit" value="Edit"/>
+            <form th:action="@{'edit'}">
+                <button type="submit" th:name="id" th:value="${users.userId}">Edit</button>
             </form>
         </td>
         <td>
-            <form th:method="DELETE" th:action="@{'delete/' + ${users.userId}}">
+            <form th:method="DELETE" th:action="@{'delete?id=' + ${users.userId}}">
                 <input type="submit" class="buttonDelete" value="Delete"/>
             </form>
         </td>
